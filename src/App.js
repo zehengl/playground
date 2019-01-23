@@ -5,17 +5,17 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import styled from "styled-components";
 
 class App extends Component {
-  colors = [
-    "red",
-    "blue",
-    "green",
-    "purple",
-    "orange",
-    "black",
-    "yellow",
-    "pink",
-    "brown"
-  ];
+  colors = {
+    black: "#000000",
+    blue: "#19B5FE",
+    brown: "#8B4513",
+    green: "#00E640",
+    orange: "#F89406",
+    pink: "#FF69B4",
+    purple: "#8C14FC",
+    white: "#FFFFFF",
+    yellow: "#FFFF7E"
+  };
 
   createColoredDiv = color => {
     return styled.div`
@@ -25,16 +25,16 @@ class App extends Component {
   };
 
   render() {
-    const colors = this.colors.sort(() => 0.5 - Math.random());
+    const names = Object.keys(this.colors).sort(() => 0.5 - Math.random());
 
-    const ColorDivs = colors.map(color => {
-      const ColorDiv = this.createColoredDiv(color);
+    const ColorDivs = names.map(name => {
+      const ColorDiv = this.createColoredDiv(this.colors[name]);
       return (
         <ColorDiv
-          key={color}
+          key={name}
           className="section has-text-centered has-text-weight-bold"
         >
-          <p className="is-size-1">{color}</p>
+          <p className="is-size-1">{name}</p>
         </ColorDiv>
       );
     });
