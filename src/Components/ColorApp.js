@@ -40,6 +40,8 @@ class ColorApp extends Component {
 
     return (
       <ReactFullpage
+        loopBottom
+        loopTop
         render={() => {
           return (
             <ReactFullpage.Wrapper>
