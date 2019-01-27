@@ -12,8 +12,8 @@ class NumberApp extends Component {
           return (
             <ReactFullpage.Wrapper>
               {[...Array(10).keys()].map(number => (
-                <div className="section has-text-centered has-text-weight-bold">
-                  <p className="is-size-1">{number + 1}</p>
+                <div className="section has-text-centered has-text-weight-bold is-size-1">
+                  {number + 1}
                 </div>
               ))}
             </ReactFullpage.Wrapper>

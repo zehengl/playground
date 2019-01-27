@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import ReactFullpage from "@fullpage/react-fullpage";
-import styled from "styled-components";
 
 class ColorApp extends Component {
   colors = {
@@ -16,36 +15,22 @@ class ColorApp extends Component {
     yellow: "#FFFF7E"
   };
 
-  createColoredDiv = color => {
-    return styled.div`
-      background-color: ${color};
-      color: grey;
-    `;
-  };
-
   render() {
     const names = Object.keys(this.colors).sort(() => 0.5 - Math.random());
-
-    const ColorDivs = names.map(name => {
-      const ColorDiv = this.createColoredDiv(this.colors[name]);
-      return (
-        <ColorDiv
-          key={name}
-          className="section has-text-centered has-text-weight-bold"
-        >
-          <p className="is-size-1">{name}</p>
-        </ColorDiv>
-      );
-    });
 
     return (
       <ReactFullpage
         loopBottom
         loopTop
+        sectionsColor={names.map(name => this.colors[name])}
         render={() => {
           return (
             <ReactFullpage.Wrapper>
-              {ColorDivs.map(Div => Div)}
+              {names.map(name => (
+                <div className="section has-text-centered has-text-weight-bold is-size-1">
+                  {name}
+                </div>
+              ))}
             </ReactFullpage.Wrapper>
           );
         }}
