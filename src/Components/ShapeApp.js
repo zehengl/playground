@@ -1,12 +1,4 @@
-import {
-  Circle,
-  Ellipse,
-  Layer,
-  Rect,
-  RegularPolygon,
-  Stage,
-  Star
-} from "react-konva";
+import { Layer, RegularPolygon, Stage } from "react-konva";
 import React, { Component } from "react";
 
 import Konva from "konva";
@@ -19,9 +11,10 @@ class ShapeApp extends Component {
   };
 
   handleDragStart = e => {
+    e.target.moveToTop();
     e.target.setAttrs({
-      scaleX: 1.2,
-      scaleY: 1.2
+      scaleX: 2,
+      scaleY: 2
     });
   };
 
@@ -34,82 +27,25 @@ class ShapeApp extends Component {
     });
   };
 
+  commonProps = {
+    draggable: true,
+    x: window.innerWidth / 2,
+    y: window.innerHeight / 2,
+    fill: Konva.Util.getRandomColor(),
+    shadowBlur: 20,
+    shadowOpacity: 0.7,
+    onDragStart: this.handleDragStart,
+    onDragEnd: this.handleDragEnd,
+    radius: this.getRadius()
+  };
+
   render() {
     return (
       <Stage width={window.innerWidth} height={window.innerHeight}>
         <Layer>
-          <Rect
-            draggable
-            x={window.innerWidth * Math.random()}
-            y={window.innerHeight * Math.random()}
-            fill={Konva.Util.getRandomColor()}
-            shadowBlur={10 * Math.random()}
-            shadowOpacity={Math.random()}
-            onDragStart={this.handleDragStart}
-            onDragEnd={this.handleDragEnd}
-            width={this.getRadius()}
-            height={this.getRadius()}
-          />
-          <Rect
-            draggable
-            x={window.innerWidth * Math.random()}
-            y={window.innerHeight * Math.random()}
-            fill={Konva.Util.getRandomColor()}
-            shadowBlur={10 * Math.random()}
-            shadowOpacity={Math.random()}
-            onDragStart={this.handleDragStart}
-            onDragEnd={this.handleDragEnd}
-            width={this.getRadius() * 2}
-            height={this.getRadius()}
-          />
-          <Circle
-            draggable
-            x={window.innerWidth * Math.random()}
-            y={window.innerHeight * Math.random()}
-            fill={Konva.Util.getRandomColor()}
-            shadowBlur={10 * Math.random()}
-            shadowOpacity={Math.random()}
-            onDragStart={this.handleDragStart}
-            onDragEnd={this.handleDragEnd}
-            radius={this.getRadius()}
-          />
-          <Star
-            draggable
-            x={window.innerWidth * Math.random()}
-            y={window.innerHeight * Math.random()}
-            fill={Konva.Util.getRandomColor()}
-            shadowBlur={10 * Math.random()}
-            shadowOpacity={Math.random()}
-            onDragStart={this.handleDragStart}
-            onDragEnd={this.handleDragEnd}
-            numPoints={5}
-            innerRadius={this.getRadius() / 2}
-            outerRadius={this.getRadius()}
-          />
-          <Ellipse
-            draggable
-            x={window.innerWidth * Math.random()}
-            y={window.innerHeight * Math.random()}
-            fill={Konva.Util.getRandomColor()}
-            shadowBlur={10 * Math.random()}
-            shadowOpacity={Math.random()}
-            onDragStart={this.handleDragStart}
-            onDragEnd={this.handleDragEnd}
-            radiusX={this.getRadius() * 2}
-            radiusY={this.getRadius()}
-          />
-          <RegularPolygon
-            draggable
-            x={window.innerWidth * Math.random()}
-            y={window.innerHeight * Math.random()}
-            fill={Konva.Util.getRandomColor()}
-            shadowBlur={10 * Math.random()}
-            shadowOpacity={Math.random()}
-            onDragStart={this.handleDragStart}
-            onDragEnd={this.handleDragEnd}
-            sides={5}
-            radius={this.getRadius()}
-          />
+          {[3, 4, 5, 6, 7, 8, 360].reverse().map(numSlides => (
+            <RegularPolygon {...this.commonProps} sides={numSlides} />
+          ))}
         </Layer>
       </Stage>
     );
