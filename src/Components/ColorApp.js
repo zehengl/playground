@@ -11,6 +11,7 @@ class ColorApp extends Component {
     orange: "#F89406",
     pink: "#FF69B4",
     purple: "#8C14FC",
+    red: "#FF0800",
     white: "#FFFFFF",
     yellow: "#FFFF7E"
   };
