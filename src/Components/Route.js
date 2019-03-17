@@ -1,5 +1,6 @@
 import { NavLink, Route, BrowserRouter as Router } from "react-router-dom";
 
+import AnimalApp from "./AnimalApp";
 import ColorApp from "./ColorApp";
 import Home from "./Home";
 import NumberApp from "./NumberApp";
@@ -20,14 +21,17 @@ const Routes = () => (
         <NavLink to="/" className="navbar-item">
           Playground
         </NavLink>
+        <NavLink to="/animal" className="navbar-item" activeStyle={activeStyle}>
+          Animal
+        </NavLink>
+        <NavLink to="/color" className="navbar-item" activeStyle={activeStyle}>
+          Color
+        </NavLink>
         <NavLink to="/number" className="navbar-item" activeStyle={activeStyle}>
           Number
         </NavLink>
         <NavLink to="/shape" className="navbar-item" activeStyle={activeStyle}>
           Shape
-        </NavLink>
-        <NavLink to="/color" className="navbar-item" activeStyle={activeStyle}>
-          Color
         </NavLink>
       </nav>
 
@@ -35,6 +39,7 @@ const Routes = () => (
       <Route path="/number" component={NumberApp} />
       <Route path="/shape" component={ShapeApp} />
       <Route path="/color" component={ColorApp} />
+      <Route path="/animal" component={AnimalApp} />
     </div>
   </Router>
 );
