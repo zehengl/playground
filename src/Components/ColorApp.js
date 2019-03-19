@@ -28,9 +28,7 @@ class ColorApp extends Component {
           return (
             <ReactFullpage.Wrapper>
               {names.map(name => (
-                <div className="section has-text-centered has-text-weight-bold is-size-1">
-                  {name}
-                </div>
+                <div key={name} className="section" style={{ padding: 0 }} />
               ))}
             </ReactFullpage.Wrapper>
           );

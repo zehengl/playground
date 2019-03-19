@@ -12,8 +12,12 @@ class NumberApp extends Component {
           return (
             <ReactFullpage.Wrapper>
               {[...Array(10).keys()].map(number => (
-                <div className="section has-text-centered has-text-weight-bold is-size-1">
-                  {number + 1}
+                <div
+                  key={number}
+                  className="section has-text-centered"
+                  style={{ padding: 0 }}
+                >
+                  <h1 className="title">{number + 1}</h1>
                 </div>
               ))}
             </ReactFullpage.Wrapper>

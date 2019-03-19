@@ -6,6 +6,7 @@ import Home from "./Home";
 import NumberApp from "./NumberApp";
 import React from "react";
 import ShapeApp from "./ShapeApp";
+import apps from "../Static/apps.svg";
 
 const activeStyle = {
   cursor: "not-allowed",
@@ -18,19 +19,19 @@ const Routes = () => (
   <Router basename={process.env.PUBLIC_URL}>
     <div>
       <nav className="navbar" role="navigation" aria-label="main navigation">
-        <NavLink to="/" className="navbar-item">
-          Playground
+        <NavLink className="navbar-item" to="/">
+          <img alt="apps" src={apps} />
         </NavLink>
-        <NavLink to="/animal" className="navbar-item" activeStyle={activeStyle}>
+        <NavLink className="navbar-item" to="/animal" activeStyle={activeStyle}>
           Animal
         </NavLink>
-        <NavLink to="/color" className="navbar-item" activeStyle={activeStyle}>
+        <NavLink className="navbar-item" to="/color" activeStyle={activeStyle}>
           Color
         </NavLink>
-        <NavLink to="/number" className="navbar-item" activeStyle={activeStyle}>
+        <NavLink className="navbar-item" to="/number" activeStyle={activeStyle}>
           Number
         </NavLink>
-        <NavLink to="/shape" className="navbar-item" activeStyle={activeStyle}>
+        <NavLink className="navbar-item" to="/shape" activeStyle={activeStyle}>
           Shape
         </NavLink>
       </nav>

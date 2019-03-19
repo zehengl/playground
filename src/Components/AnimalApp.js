@@ -56,7 +56,10 @@ class AnimalApp extends Component {
           return (
             <ReactFullpage.Wrapper>
               {animals.map(animal => (
-                <div className="section has-text-centered">
+                <div
+                  className="section has-text-centered"
+                  style={{ padding: 0 }}
+                >
                   <img alt="animal" src={animal} />
                 </div>
               ))}
