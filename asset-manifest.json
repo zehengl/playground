@@ -1,12 +1,13 @@
 {
-  "main.js": "/playground/static/js/main.0382c62e.chunk.js",
-  "main.js.map": "/playground/static/js/main.0382c62e.chunk.js.map",
-  "static/js/1.19b641ab.chunk.js": "/playground/static/js/1.19b641ab.chunk.js",
-  "static/js/1.19b641ab.chunk.js.map": "/playground/static/js/1.19b641ab.chunk.js.map",
+  "main.js": "/playground/static/js/main.6fd2be09.chunk.js",
+  "main.js.map": "/playground/static/js/main.6fd2be09.chunk.js.map",
+  "static/js/1.d9a18e8b.chunk.js": "/playground/static/js/1.d9a18e8b.chunk.js",
+  "static/js/1.d9a18e8b.chunk.js.map": "/playground/static/js/1.d9a18e8b.chunk.js.map",
   "runtime~main.js": "/playground/static/js/runtime~main.fd2222a6.js",
   "runtime~main.js.map": "/playground/static/js/runtime~main.fd2222a6.js.map",
   "static/media/zebra.png": "/playground/static/media/zebra.c5043af1.png",
+  "static/media/apps.svg": "/playground/static/media/apps.3938d869.svg",
   "index.html": "/playground/index.html",
-  "precache-manifest.df0068a0a825e36ee7129458840fee98.js": "/playground/precache-manifest.df0068a0a825e36ee7129458840fee98.js",
+  "precache-manifest.09e0a07e311e00f58d8a3701bd3bf799.js": "/playground/precache-manifest.09e0a07e311e00f58d8a3701bd3bf799.js",
   "service-worker.js": "/playground/service-worker.js"
 }
