@@ -2,6 +2,7 @@ import { NavLink, Route, BrowserRouter as Router } from "react-router-dom";
 
 import AnimalApp from "./AnimalApp";
 import ColorApp from "./ColorApp";
+import HanziApp from "./HanziApp";
 import Home from "./Home";
 import NumberApp from "./NumberApp";
 import React from "react";
@@ -34,6 +35,9 @@ const Routes = () => (
         <NavLink className="navbar-item" to="/shape" activeStyle={activeStyle}>
           Shape
         </NavLink>
+        <NavLink className="navbar-item" to="/hanzi" activeStyle={activeStyle}>
+          Hanzi
+        </NavLink>
       </nav>
 
       <Route exact path="/" component={Home} />
@@ -41,6 +45,7 @@ const Routes = () => (
       <Route path="/shape" component={ShapeApp} />
       <Route path="/color" component={ColorApp} />
       <Route path="/animal" component={AnimalApp} />
+      <Route path="/hanzi" component={HanziApp} />
     </div>
   </Router>
 );
