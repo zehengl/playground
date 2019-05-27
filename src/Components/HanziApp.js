@@ -71,18 +71,21 @@ class HanziApp extends Component {
       })
     ];
 
-    let run = () => {
+    let run = async () => {
       let chars = [];
       for (let char of title) {
-        char.loopCharacterAnimation();
         chars.push(char);
       }
       for (let sentence of sentences) {
         for (let char of sentence) {
-          char.quiz();
           chars.push(char);
         }
       }
+
+      for (let char of chars) {
+        await char.animateCharacter();
+      }
+      await run();
     };
 
     run();
