@@ -1,6 +1,6 @@
 # Playground
 
-Silly apps for my little one.
+Silly apps for my little ones.
 
 ## Credits
 
