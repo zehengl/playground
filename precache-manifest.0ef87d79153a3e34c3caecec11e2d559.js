@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "ce27efe8215abfb029cc039c66e7198f",
-    "url": "/playground/static/media/peacockpurple-03happy.ce27efe8.png"
+    "revision": "86702384ec37da6ab484",
+    "url": "/playground/static/js/main.86702384.chunk.js"
   },
   {
-    "revision": "0835db93091b18d24d56",
-    "url": "/playground/static/js/main.0835db93.chunk.js"
+    "revision": "267fc5fefb5cdeeab6e6",
+    "url": "/playground/static/js/1.267fc5fe.chunk.js"
   },
   {
     "revision": "fd2222a613df36f2a7bd",
     "url": "/playground/static/js/runtime~main.fd2222a6.js"
   },
   {
-    "revision": "08b1b87b15f6beedf435e8e1c664a9c6",
-    "url": "/playground/static/media/apps.08b1b87b.svg"
+    "revision": "3938d8699b66da87901767e7675b7fb3",
+    "url": "/playground/static/media/apps.3938d869.svg"
   },
   {
     "revision": "dadbf42dbf92a5a9e4ad235b3e013670",
@@ -56,8 +56,8 @@ self.__precacheManifest = [
     "url": "/playground/static/media/peacockblue.b7b798c8.png"
   },
   {
-    "revision": "c5043af189954c1a51a1a0a43e391110",
-    "url": "/playground/static/media/zebra-03happy.c5043af1.png"
+    "revision": "ce27efe8215abfb029cc039c66e7198f",
+    "url": "/playground/static/media/peacockpurple-03happy.ce27efe8.png"
   },
   {
     "revision": "5c9037fe4c80fd777d2e7761e5d4318f",
@@ -104,11 +104,11 @@ self.__precacheManifest = [
     "url": "/playground/static/media/tygerbengal.582e6ac1.png"
   },
   {
-    "revision": "f1d3faabeffddbb625f0",
-    "url": "/playground/static/js/1.f1d3faab.chunk.js"
+    "revision": "c5043af189954c1a51a1a0a43e391110",
+    "url": "/playground/static/media/zebra-03happy.c5043af1.png"
   },
   {
-    "revision": "f3fb5cf7abbafe706d80806b24fe0f7d",
+    "revision": "dcbf711191796878515b72ff4adc412a",
     "url": "/playground/index.html"
   }
 ];
