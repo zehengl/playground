@@ -1,5 +1,7 @@
 # Playground
 
+[![Build Status](https://travis-ci.org/zehengl/playground.svg?branch=master)](https://travis-ci.org/zehengl/playground)
+
 Silly apps for my little ones.
 
 ## Credits
