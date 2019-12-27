@@ -4,11 +4,12 @@ import ReactFullpage from "@fullpage/react-fullpage";
 
 class AnimalApp extends Component {
   importAnimals(r) {
-    let animals = {};
-    r.keys().map(item => {
-      animals[item.replace("./", "").replace(".png", "")] = r(item);
-    });
-    return animals;
+    return Object.fromEntries(
+      r.keys().map(item => {
+        let key = item.replace("./", "").replace(".png", "");
+        return [[key], r(item)];
+      })
+    );
   }
 
   render() {
