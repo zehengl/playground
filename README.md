@@ -1,6 +1,7 @@
 # Playground
 
 [![Build Status](https://travis-ci.org/zehengl/playground.svg?branch=master)](https://travis-ci.org/zehengl/playground)
+[![time tracker](https://wakatime.com/badge/github/zehengl/playground.svg)](https://wakatime.com/badge/github/zehengl/playground)
 
 Silly apps for my little ones.
 
