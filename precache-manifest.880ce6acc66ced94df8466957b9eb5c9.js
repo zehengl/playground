@@ -1,15 +1,23 @@
-self.__precacheManifest = [
+self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "86702384ec37da6ab484",
-    "url": "/playground/static/js/main.86702384.chunk.js"
+    "revision": "db685a8f081a74080a4b370f3cfb4ee5",
+    "url": "/playground/index.html"
   },
   {
-    "revision": "267fc5fefb5cdeeab6e6",
-    "url": "/playground/static/js/1.267fc5fe.chunk.js"
+    "revision": "d9b900e10f5c168f97b9",
+    "url": "/playground/static/js/2.f559a83f.chunk.js"
   },
   {
-    "revision": "fd2222a613df36f2a7bd",
-    "url": "/playground/static/js/runtime~main.fd2222a6.js"
+    "revision": "dd00eba1f8792cabccfa9d957c4decb5",
+    "url": "/playground/static/js/2.f559a83f.chunk.js.LICENSE"
+  },
+  {
+    "revision": "4ea1e4d857be324ad8ef",
+    "url": "/playground/static/js/main.32599173.chunk.js"
+  },
+  {
+    "revision": "c82bad4aa24fa160f3c7",
+    "url": "/playground/static/js/runtime-main.4d2169c1.js"
   },
   {
     "revision": "3938d8699b66da87901767e7675b7fb3",
@@ -106,9 +114,5 @@ self.__precacheManifest = [
   {
     "revision": "c5043af189954c1a51a1a0a43e391110",
     "url": "/playground/static/media/zebra-03happy.c5043af1.png"
-  },
-  {
-    "revision": "dcbf711191796878515b72ff4adc412a",
-    "url": "/playground/index.html"
   }
-];
+]);
