@@ -1,16 +1,16 @@
 {
-  "short_name": "Playgroud",
   "name": "Playground",
+  "short_name": "Playgroud",
+  "scope": "/playground/",
+  "start_url": "/playground/index.html",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "display": "minimal-ui",
   "icons": [
     {
       "src": "logo-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "scope": "/playground/",
-  "start_url": "/playground/index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }
