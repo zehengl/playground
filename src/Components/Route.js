@@ -2,6 +2,7 @@ import { NavLink, Route, BrowserRouter as Router } from "react-router-dom";
 
 import AnimalApp from "./AnimalApp";
 import ColorApp from "./ColorApp";
+import FlagApp from "./FlagApp";
 import Home from "./Home";
 import NumberApp from "./NumberApp";
 import React from "react";
@@ -12,7 +13,7 @@ const activeStyle = {
   cursor: "not-allowed",
   opacity: 0.2,
   textDecoration: "none",
-  pointerEvents: "none"
+  pointerEvents: "none",
 };
 
 const Routes = () => (
@@ -21,6 +22,9 @@ const Routes = () => (
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <NavLink className="navbar-item" to="/">
           <img alt="apps" src={apps} />
+        </NavLink>
+        <NavLink className="navbar-item" to="/flag" activeStyle={activeStyle}>
+          Flag
         </NavLink>
         <NavLink className="navbar-item" to="/animal" activeStyle={activeStyle}>
           Animal
@@ -37,6 +41,7 @@ const Routes = () => (
       </nav>
 
       <Route exact path="/" component={Home} />
+      <Route path="/flag" component={FlagApp} />
       <Route path="/number" component={NumberApp} />
       <Route path="/shape" component={ShapeApp} />
       <Route path="/color" component={ColorApp} />
