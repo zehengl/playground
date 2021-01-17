@@ -13,7 +13,7 @@ class ColorApp extends Component {
     purple: "#8C14FC",
     red: "#FF0800",
     white: "#FFFFFF",
-    yellow: "#FFFF7E"
+    yellow: "#FFFF7E",
   };
 
   render() {
@@ -23,11 +23,11 @@ class ColorApp extends Component {
       <ReactFullpage
         loopBottom
         loopTop
-        sectionsColor={names.map(name => this.colors[name])}
+        sectionsColor={names.map((name) => this.colors[name])}
         render={() => {
           return (
             <ReactFullpage.Wrapper>
-              {names.map(name => (
+              {names.map((name) => (
                 <div key={name} className="section" style={{ padding: 0 }} />
               ))}
             </ReactFullpage.Wrapper>

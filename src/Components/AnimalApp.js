@@ -5,7 +5,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 class AnimalApp extends Component {
   importAnimals(r) {
     return Object.fromEntries(
-      r.keys().map(item => {
+      r.keys().map((item) => {
         let key = item.replace("./", "").replace(".png", "");
         return [[key], r(item)];
       })
@@ -17,6 +17,10 @@ class AnimalApp extends Component {
       require.context("../Static/animals", false, /\.png$/)
     );
 
+    const randomAnimals = Object.keys(animals)
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 10);
+
     return (
       <ReactFullpage
         loopBottom
@@ -24,18 +28,16 @@ class AnimalApp extends Component {
         render={() => {
           return (
             <ReactFullpage.Wrapper>
-              {Object.keys(animals)
-                .sort(() => 0.5 - Math.random())
-                .map(name => (
-                  <div
-                    className="section has-text-centered"
-                    style={{ padding: 0 }}
-                    key={name}
-                  >
-                    <img alt={name} src={animals[name]} />
-                    <p>{name}</p>
-                  </div>
-                ))}
+              {randomAnimals.map((name) => (
+                <div
+                  className="section has-text-centered"
+                  style={{ padding: 0 }}
+                  key={name}
+                >
+                  <img alt={name} src={animals[name].default} />
+                  <p>{name}</p>
+                </div>
+              ))}
             </ReactFullpage.Wrapper>
           );
         }}
