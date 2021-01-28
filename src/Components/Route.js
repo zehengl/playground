@@ -1,11 +1,11 @@
 import { NavLink, Route, BrowserRouter as Router } from "react-router-dom";
+import React, { useRef, useState } from "react";
 
 import AnimalApp from "./AnimalApp";
 import ColorApp from "./ColorApp";
 import FlagApp from "./FlagApp";
 import Home from "./Home";
 import NumberApp from "./NumberApp";
-import React from "react";
 import ShapeApp from "./ShapeApp";
 import apps from "../Static/apps.svg";
 
@@ -16,28 +16,84 @@ const activeStyle = {
   pointerEvents: "none",
 };
 
-const Routes = () => (
-  <Router basename={process.env.PUBLIC_URL}>
-    <div>
+function Routes() {
+  const [isActive, setActive] = useState(false);
+  const navbarBurger = useRef(null);
+  const navbarMenu = useRef(null);
+  const toggleClass = () => setActive(!isActive);
+  const onClick = () => setActive(false);
+
+  return (
+    <Router basename={process.env.PUBLIC_URL}>
       <nav className="navbar" role="navigation" aria-label="main navigation">
-        <NavLink className="navbar-item" to="/">
-          <img alt="apps" src={apps} />
-        </NavLink>
-        <NavLink className="navbar-item" to="/flag" activeStyle={activeStyle}>
-          Flag
-        </NavLink>
-        <NavLink className="navbar-item" to="/animal" activeStyle={activeStyle}>
-          Animal
-        </NavLink>
-        <NavLink className="navbar-item" to="/color" activeStyle={activeStyle}>
-          Color
-        </NavLink>
-        <NavLink className="navbar-item" to="/number" activeStyle={activeStyle}>
-          Number
-        </NavLink>
-        <NavLink className="navbar-item" to="/shape" activeStyle={activeStyle}>
-          Shape
-        </NavLink>
+        <div className="navbar-brand">
+          <NavLink className="navbar-item" to="/">
+            <img alt="apps" src={apps} />
+          </NavLink>
+
+          <button
+            className={isActive ? "navbar-burger is-active" : "navbar-burger"}
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navMenu"
+            onClick={toggleClass}
+            style={{ border: "none", background: "none", outline: "none" }}
+            ref={navbarBurger}
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div
+          id="navMenu"
+          className={isActive ? "navbar-menu is-active" : "navbar-menu"}
+          ref={navbarMenu}
+        >
+          <div className="navbar-start">
+            <NavLink
+              className="navbar-item"
+              to="/flag"
+              activeStyle={activeStyle}
+              onClick={onClick}
+            >
+              Flag
+            </NavLink>
+            <NavLink
+              className="navbar-item"
+              to="/animal"
+              activeStyle={activeStyle}
+              onClick={onClick}
+            >
+              Animal
+            </NavLink>
+            <NavLink
+              className="navbar-item"
+              to="/color"
+              activeStyle={activeStyle}
+              onClick={onClick}
+            >
+              Color
+            </NavLink>
+            <NavLink
+              className="navbar-item"
+              to="/number"
+              activeStyle={activeStyle}
+              onClick={onClick}
+            >
+              Number
+            </NavLink>
+            <NavLink
+              className="navbar-item"
+              to="/shape"
+              activeStyle={activeStyle}
+              onClick={onClick}
+            >
+              Shape
+            </NavLink>
+          </div>
+        </div>
       </nav>
 
       <Route exact path="/" component={Home} />
@@ -46,8 +102,8 @@ const Routes = () => (
       <Route path="/shape" component={ShapeApp} />
       <Route path="/color" component={ColorApp} />
       <Route path="/animal" component={AnimalApp} />
-    </div>
-  </Router>
-);
+    </Router>
+  );
+}
 
 export default Routes;

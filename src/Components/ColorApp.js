@@ -1,9 +1,8 @@
-import React, { Component } from "react";
-
+import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 
-class ColorApp extends Component {
-  colors = {
+function ColorApp() {
+  const colors = {
     black: "#000000",
     blue: "#19B5FE",
     brown: "#8B4513",
@@ -16,26 +15,24 @@ class ColorApp extends Component {
     yellow: "#FFFF7E",
   };
 
-  render() {
-    const names = Object.keys(this.colors).sort(() => 0.5 - Math.random());
+  const names = Object.keys(colors).sort(() => 0.5 - Math.random());
 
-    return (
-      <ReactFullpage
-        loopBottom
-        loopTop
-        sectionsColor={names.map((name) => this.colors[name])}
-        render={() => {
-          return (
-            <ReactFullpage.Wrapper>
-              {names.map((name) => (
-                <div key={name} className="section" style={{ padding: 0 }} />
-              ))}
-            </ReactFullpage.Wrapper>
-          );
-        }}
-      />
-    );
-  }
+  return (
+    <ReactFullpage
+      loopBottom
+      loopTop
+      sectionsColor={names.map((name) => colors[name])}
+      render={() => {
+        return (
+          <ReactFullpage.Wrapper>
+            {names.map((name) => (
+              <div key={name} className="section" style={{ padding: 0 }} />
+            ))}
+          </ReactFullpage.Wrapper>
+        );
+      }}
+    />
+  );
 }
 
 export default ColorApp;

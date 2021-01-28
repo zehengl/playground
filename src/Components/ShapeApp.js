@@ -4,20 +4,20 @@ import React, { Component } from "react";
 import Konva from "konva";
 
 class ShapeApp extends Component {
-  handleDragStart = e => {
+  handleDragStart = (e) => {
     e.target.moveToTop();
     e.target.setAttrs({
       scaleX: 2,
-      scaleY: 2
+      scaleY: 2,
     });
   };
 
-  handleDragEnd = e => {
+  handleDragEnd = (e) => {
     e.target.to({
       duration: 0.5,
       easing: Konva.Easings.BounceEaseOut,
       scaleX: 1,
-      scaleY: 1
+      scaleY: 1,
     });
   };
 
@@ -30,14 +30,14 @@ class ShapeApp extends Component {
     shadowOpacity: 0.7,
     onDragStart: this.handleDragStart,
     onDragEnd: this.handleDragEnd,
-    radius: 50
+    radius: 50,
   };
 
   render() {
     return (
       <Stage width={window.innerWidth} height={window.innerHeight}>
         <Layer>
-          {[3, 4, 5, 6, 7, 8, 360].reverse().map(numSlides => (
+          {[3, 4, 5, 6, 7, 8, 360].reverse().map((numSlides) => (
             <RegularPolygon
               key={numSlides}
               {...this.commonProps}

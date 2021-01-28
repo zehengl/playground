@@ -1,13 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
+import { version } from "../../package.json";
 
-class Home extends Component {
-  render() {
-    return (
-      <div className="has-text-centered">
-        <h1 className="title">for ada &amp; dan</h1>
-      </div>
-    );
-  }
+function Home() {
+  return (
+    <div className="has-text-centered">
+      <h1 className="title">for ada &amp; dan</h1>
+      <p>
+        Version <strong>{version}</strong>
+      </p>
+    </div>
+  );
 }
 
 export default Home;
