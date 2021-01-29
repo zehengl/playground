@@ -3,12 +3,16 @@ import { version } from "../../package.json";
 
 function Home() {
   return (
-    <div className="has-text-centered">
-      <h1 className="title">for ada &amp; dan</h1>
-      <p>
-        Version <strong>{version}</strong>
-      </p>
-    </div>
+    <section class="hero is-medium is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">for ada &amp; dan</h1>
+          <h2 class="subtitle">
+            Version <strong>{version}</strong>
+          </h2>
+        </div>
+      </div>
+    </section>
   );
 }
 
