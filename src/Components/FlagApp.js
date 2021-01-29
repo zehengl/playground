@@ -1,24 +1,25 @@
 import "flag-icon-css/css/flag-icon.css";
 
+import * as iso from "iso-3166";
+
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 
-const countries = {
-  ca: { english: "Canada", chinese: "加拿大" },
-  cn: { english: "China", chinese: "中国" },
-  us: { english: "United States", chinese: "美国" },
-  br: { english: "Brazil", chinese: "巴西" },
-  au: { english: "Australia", chinese: "澳大利亚" },
-  ch: { english: "Switzerland", chinese: "瑞士" },
-};
+const countries = Object.assign(
+  {},
+  ...iso.default.map((x) => ({ [x.alpha2]: x.name }))
+);
 
-const keys = Object.keys(countries).sort(() => 0.5 - Math.random());
+const keys = Object.keys(countries)
+  .sort(() => 0.5 - Math.random())
+  .slice(0, 10);
 
 function FlagApp() {
   return (
     <ReactFullpage
       loopBottom
       loopTop
+      sectionsColor={keys.map(() => "lightgrey")}
       render={() => {
         return (
           <ReactFullpage.Wrapper>
@@ -32,13 +33,11 @@ function FlagApp() {
               >
                 <div>
                   <span
-                    className={`flag-icon flag-icon-${key}`}
+                    className={`flag-icon flag-icon-${key.toLowerCase()}`}
                     style={{ fontSize: "25.5vh" }}
                   ></span>
                 </div>
-                <span style={{ fontSize: "5vh" }}>
-                  {countries[key].english} <br /> {countries[key].chinese}
-                </span>
+                <span style={{ fontSize: "5vh" }}>{countries[key]}</span>
               </div>
             ))}
           </ReactFullpage.Wrapper>
