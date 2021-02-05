@@ -7,7 +7,6 @@ import FlagApp from "./FlagApp";
 import Home from "./Home";
 import NumberApp from "./NumberApp";
 import ShapeApp from "./ShapeApp";
-import apps from "../Static/apps.svg";
 
 const activeStyle = {
   cursor: "not-allowed",
@@ -28,7 +27,7 @@ function Routes() {
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <NavLink className="navbar-item" to="/">
-            <img alt="apps" src={apps} />
+            <i class="fas fa-home"></i>
           </NavLink>
 
           <button

@@ -13,7 +13,7 @@ function Header() {
       />
       <script
         defer
-        src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"
       />
     </Helmet>
   );
