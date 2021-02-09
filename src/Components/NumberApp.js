@@ -1,6 +1,10 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 
+const keys = [...Array(100).keys()]
+  .sort(() => 0.5 - Math.random())
+  .slice(0, 10);
+
 function NumberApp() {
   return (
     <ReactFullpage
@@ -9,7 +13,7 @@ function NumberApp() {
       render={() => {
         return (
           <ReactFullpage.Wrapper>
-            {[...Array(10).keys()].map((number) => (
+            {keys.map((number) => (
               <div
                 key={number}
                 className="section has-text-centered"
