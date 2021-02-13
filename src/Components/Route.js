@@ -27,7 +27,7 @@ function Routes() {
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <NavLink className="navbar-item" to="/">
-            <i class="fas fa-home"></i>
+            <i className="fas fa-home"></i>
           </NavLink>
 
           <button
