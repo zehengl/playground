@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://zehengl.github.io/playground",
   "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.18",
+    "@fullpage/react-fullpage": "^0.1.19",
     "color-name": "^1.1.4",
     "flag-icon-css": "^3.5.0",
     "iso-3166": "^3.1.0",
