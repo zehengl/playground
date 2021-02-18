@@ -13,7 +13,7 @@ object-assign
   */
 
 /*!
-  * fullPage 3.0.9 - Extensions 0.1.9
+  * fullPage 3.1.0 - Extensions 0.2.2
   * https://github.com/alvarotrigo/fullPage.js
   * @license http://alvarotrigo.com/fullPage/extensions/#license
   *
@@ -21,7 +21,7 @@ object-assign
   */
 
 /*!
- * @fullpage/react-fullpage 0.1.18
+ * @fullpage/react-fullpage 0.1.19
  * https://github.com/alvarotrigo/react-fullpage
  * @license https://github.com/alvarotrigo/react-fullpage#license
  *
