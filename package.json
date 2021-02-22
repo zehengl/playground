@@ -8,7 +8,7 @@
     "color-name": "^1.1.4",
     "flag-icon-css": "^3.5.0",
     "iso-3166": "^3.1.0",
-    "konva": "^7.2.3",
+    "konva": "^7.2.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
