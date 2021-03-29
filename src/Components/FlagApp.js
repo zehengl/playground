@@ -1,13 +1,12 @@
 import "flag-icon-css/css/flag-icon.css";
 
-import * as iso from "iso-3166";
-
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
+import { iso31661 as iso } from "iso-3166";
 
 const countries = Object.assign(
   {},
-  ...iso.default.map((x) => ({ [x.alpha2]: x.name }))
+  ...iso.map((x) => ({ [x.alpha2]: x.name }))
 );
 
 const keys = Object.keys(countries)
