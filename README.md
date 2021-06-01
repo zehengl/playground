@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://cdn3.iconfinder.com/data/icons/solid-amenities-icon-set/64/PLayground_2-512.png" alt="logo" height="196">
+    <img src="https://github.com/zehengl/playground/blob/main/public/logo-512.png" alt="logo" height="196">
 </div>
 
 # playground
