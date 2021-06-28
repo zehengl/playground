@@ -14,15 +14,9 @@ Silly apps for my little ones
     npm install
     npm start
 
-<hr>
-
-<sup>
-
 ## Credits
 
 - [Icon][1] by [PINPOINT.WORLD][2]
-
-</sup>
 
 [1]: https://www.iconfinder.com/icons/753116/kids_park_play_playground_swing_icon
 [2]: https://www.iconfinder.com/pinpointworld
