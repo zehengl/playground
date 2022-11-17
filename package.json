@@ -1,6 +1,6 @@
 {
   "name": "playground",
-  "version": "0.8.10",
+  "version": "0.8.11",
   "private": true,
   "homepage": "http://zehengl.github.io/playground",
   "dependencies": {
