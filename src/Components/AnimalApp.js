@@ -32,7 +32,7 @@ function AnimalApp() {
                 style={{ padding: 0 }}
                 key={key}
               >
-                <img alt={key} src={animals[key].default} />
+                <img alt={key} src={animals[key]} />
                 <p>{key}</p>
               </div>
             ))}

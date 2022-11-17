@@ -19,7 +19,7 @@ function NumberApp() {
                 className="section has-text-centered"
                 style={{ padding: 0 }}
               >
-                <h1 className="title" style={{ fontSize: "25.5vh" }}>
+                <h1 className="card title" style={{ fontSize: "25.5vh" }}>
                   {number + 1}
                 </h1>
               </div>

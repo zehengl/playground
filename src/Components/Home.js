@@ -1,5 +1,4 @@
 import React from "react";
-import { version } from "../../package.json";
 
 function Home() {
   return (
@@ -7,9 +6,6 @@ function Home() {
       <div className="hero-body">
         <div className="container">
           <h1 className="title">for ada &amp; dan</h1>
-          <h2 className="subtitle">
-            Version <strong>{version}</strong>
-          </h2>
         </div>
       </div>
     </section>
