@@ -1,4 +1,4 @@
-import * as colors from "color-name";
+import colors from "color-name";
 
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
