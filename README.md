@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://github.com/zehengl/playground/blob/main/public/logo-512.png" alt="logo" height="196">
+    <img src="https://github.com/zehengl/playground/blob/main/public/logo-512.png" alt="logo" height="128">
 </div>
 
 # playground
