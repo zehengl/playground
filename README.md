@@ -4,7 +4,7 @@
 
 # playground
 
-[![GitHub Pages Build and Deploy](https://github.com/zehengl/playground/actions/workflows/gh-pages-build-deploy.yml/badge.svg)](https://github.com/zehengl/playground/actions/workflows/gh-pages-build-deploy.yml)
+[![GitHub Pages](https://github.com/zehengl/playground/actions/workflows/gh-deploy.yml/badge.svg)](https://github.com/zehengl/playground/actions/workflows/gh-deploy.yml)
 
 Silly apps for my little ones
 
