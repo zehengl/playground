@@ -10,5 +10,5 @@ Silly apps for my little ones
 
 ## Getting Started
 
-    npm install --force
+    npm install
     npm start
