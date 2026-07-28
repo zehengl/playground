@@ -1,4 +1,4 @@
-import "flag-icon-css/css/flag-icon.css";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
@@ -32,7 +32,7 @@ function FlagApp() {
               >
                 <div>
                   <span
-                    className={`flag-icon flag-icon-${key.toLowerCase()}`}
+                    className={`fi fi-${key.toLowerCase()}`}
                     style={{ fontSize: "25.5vh" }}
                   ></span>
                 </div>
